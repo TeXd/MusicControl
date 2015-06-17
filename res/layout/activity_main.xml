@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff202c3d"
+    tools:context="com.neteasemusiccontrol.MainActivity" >
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="#ff037fff"
+        android:text="Music is life"
+        android:textSize="20sp"
+        android:textColor="#ffffffff" />
+    
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/banner"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="#ffffff"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true" >
+    
+	    <ImageView
+	        android:id="@+id/cd"
+	        android:layout_width="250dp"
+	        android:layout_height="250dp"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/cd" />
+   
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="70dp"
+	        android:orientation="horizontal"
+	        android:layout_below="@id/cd"
+	        android:layout_marginTop="20dp">
+	        
+		    <ImageView
+		        android:id="@+id/button_play"
+		        android:layout_width="70dp"
+		        android:layout_height="70dp"
+		        android:layout_centerHorizontal="true"
+		        android:background="@drawable/ic_play" />
+		    
+		    <ImageView
+		        android:id="@+id/button_back"
+		        android:layout_width="70dp"
+		        android:layout_height="70dp"
+		        android:layout_alignTop="@+id/button_play"
+		        android:layout_toLeftOf="@id/button_play"
+		        android:layout_marginRight="20dp"
+		        android:background="@drawable/ic_back" />
+		    
+		    <ImageView
+		        android:id="@+id/button_forward"
+		        android:layout_width="70dp"
+		        android:layout_height="70dp"
+		        android:layout_alignTop="@+id/button_play"
+		        android:layout_toRightOf="@id/button_play"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/ic_forward" />
+		    
+    	</RelativeLayout>
+    	
+   </RelativeLayout>
+   
+   <LinearLayout 
+        android:layout_width="match_parent"
+        android:id="@+id/volum_op"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        
+        <RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="5"
+			android:background="#29384d">
+        
+	        <ImageView 
+	        android:id="@+id/button_downvol"
+	        android:layout_height="50dp"
+	        android:layout_width="50dp"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_downvol"
+	        />
+    	</RelativeLayout>
+    	
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9.9" >
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="5"
+			android:background="#29384d">
+        
+	        <ImageView 
+	        android:id="@+id/button_upvol"
+	        android:layout_height="50dp"
+	        android:layout_width="50dp"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/ic_upvol"
+	        />
+    	</RelativeLayout>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/volum_op"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="#ff037fff"/>
+    
+</RelativeLayout>
